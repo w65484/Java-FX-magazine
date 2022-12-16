@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<AnchorPane
+        AnchorPane.bottomAnchor="0.0"
+        AnchorPane.leftAnchor="0.0"
+        AnchorPane.rightAnchor="0.0"
+        AnchorPane.topAnchor="0.0"
+        xmlns="http://javafx.com/javafx/11.0.2"
+        xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="com.example.projekt.controllers.CategoriesController">
+    <userData>
+        <fx:reference source="controller" />
+    </userData>
+    <Label
+            alignment="CENTER"
+            contentDisplay="CENTER"
+            text="Kategorie"
+            textAlignment="CENTER"
+            AnchorPane.topAnchor="10"
+            AnchorPane.leftAnchor="0.0"
+            AnchorPane.rightAnchor="0.0">
+        <font>
+            <Font name="System Bold" size="25.0" />
+        </font>
+    </Label>
+    <TextField
+            fx:id="searchField"
+            promptText="Nazwa"
+            AnchorPane.topAnchor="100.0"
+    />
+    <TableView
+            fx:id="tableView"
+            AnchorPane.bottomAnchor="10"
+            AnchorPane.leftAnchor="0.0"
+            AnchorPane.rightAnchor="10"
+            AnchorPane.topAnchor="130"
+            items="${controller.items}"
+            contextMenu="${controller.contextMenu}">
+        <columns>
+            <TableColumn text="Nazwa" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="name" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Opis" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="description" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+        <columnResizePolicy>
+          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+        </columnResizePolicy>
+    </TableView>
+</AnchorPane>

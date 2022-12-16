@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<AnchorPane
+        AnchorPane.bottomAnchor="0.0"
+        AnchorPane.leftAnchor="0.0"
+        AnchorPane.rightAnchor="0.0"
+        AnchorPane.topAnchor="0.0"
+        xmlns="http://javafx.com/javafx/11.0.2"
+        xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="com.example.projekt.controllers.ManufacturersFormController">
+    <userData>
+        <fx:reference source="controller" />
+    </userData>
+    <children>
+
+        <Label fx:id="infoLabel" text="Dodaj producenta" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="10.0" AnchorPane.rightAnchor="0" alignment="CENTER" textAlignment="CENTER" maxWidth="Infinity">
+            <font>
+                <Font name="System Bold" size="25.0" />
+            </font>
+        </Label>
+
+        <Label text="Nazwa"           AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="100.0" />
+        <TextField fx:id="name"       AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="120.0" AnchorPane.rightAnchor="30.0" />
+
+        <Label text="Opis"            AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="160.0" />
+        <TextArea fx:id="description" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="180.0" AnchorPane.rightAnchor="30.0" prefHeight="110"/>
+
+        <Label text="Adres"           AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="300.0" />
+        <TextField fx:id="address"    AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="320.0" AnchorPane.rightAnchor="30.0" />
+
+        <Label text="Slogan"           AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="360.0" />
+        <TextField fx:id="slogan"     AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="380.0" AnchorPane.rightAnchor="30.0" />
+
+        <Label fx:id="errorLabel" text="Wypełnij poprawnie wszystkie pola formularza" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="570.0" textFill="red" visible="false" />
+
+        <Button onAction="#cancel" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Anuluj" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="420.0" />
+        <Button onAction="#add"    mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Zapisz" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="420.0" />
+    </children>
+</AnchorPane>

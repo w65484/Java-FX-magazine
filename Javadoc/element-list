@@ -1,0 +1,9 @@
+module:com.example.projekt
+com.example.projekt
+com.example.projekt.cellFactories
+com.example.projekt.controllers
+com.example.projekt.database
+com.example.projekt.database.entities
+com.example.projekt.helpers
+com.example.projekt.interfaces
+com.example.projekt.validators
